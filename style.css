@@ -1,5 +1,5 @@
 body {
-    background: black;
+    background: #813f15;
     color: white;
 }
 
@@ -27,4 +27,9 @@ body {
 .card-hover .btn {
     font-size: 0.8rem;
     padding: 5px 10px;
+}
+
+.bgP{
+    background: #331b09;
+
 }
