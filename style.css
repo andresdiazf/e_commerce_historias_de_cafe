@@ -1,35 +1,36 @@
 body {
-    background: #813f15;
-    color: white;
+    background-color: #b08D57;
+}
+
+.hero-section {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://www.elespectador.com/resizer/v2/X5QYSWJX4FGE3GUXLCYZTPQHRI.jpeg?auth=23698a37327a73897389d61d832b9d0e9d426d77622535936d297588fa300e28&width=920&height=613&smart=true&quality=60'); 
+    background-size: cover;
+    background-position: center;
 }
 
 .titulo-cafe {
-    color: #6f4e37; 
+    color: #6f4e37;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
 }
 
 .card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 240px; 
+    transition: all 0.3s ease;
+    background: #b0a799;
 }
 
 .card-hover:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(255,255,255,0.1) !important;
-    cursor: pointer;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
 }
 
-.card-hover img {
-    height: 180px;
+.card-img-top {
+    height: 120px;
     object-fit: cover;
 }
-.card-hover .btn {
-    font-size: 0.8rem;
-    padding: 5px 10px;
-}
 
-.bgP{
-    background: #331b09;
-
+footer {
+    background-color: #2b1d12;
 }
