@@ -1,3 +1,25 @@
-.body{
+
+@import url("paletaColores.css");
+
+body{
     background: burlywood;
+    background: url('tu-fondo-de-cafeteria.jpg') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
+footer {
+    background-color: #2b1d12;
+}
+
+.btnEnviar {
+    background-color:var(--color-primary) ;
+    color: var(--color-background);
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
