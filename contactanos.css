@@ -1,13 +1,83 @@
-
+@import url('https://googleapis.com');
 @import url("paletaColores.css");
 
 body{
     background: burlywood;
-    background: url('./img/background.jpg') center/cover;
+    background: url('tu-fondo-de-cafeteria.jpg') center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
+}
+
+.card.container {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    max-width: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    animation: fadeIn 1s ease-out;
+}
+
+.form-label {
+    color: var(--color-background);
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background: #fff;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 15px var(--color-highlight);
+    transform: translateY(-2px);
+}
+
+.btnEnviar {
+    background: var(--color-primary);
+    color: white;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 40px !important;
+    box-shadow: 0 4px 15px rgba(83, 39, 33, 0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btnEnviar:hover {
+    background: var(--color-primary-active);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(83, 39, 33, 0.6);
+}
+
+
+.card.container::before {
+    content: "☕";
+    font-size: 2rem;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-background);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 footer {
@@ -21,12 +91,5 @@ footer {
     border-radius: 25px;
     cursor: pointer;
     transition: 0.3s;
-}
-
-.btnEnviar:hover
-{
-    background: var(--color-secondary);
-    border-color: var(--color-primary);
-    
 }
 
