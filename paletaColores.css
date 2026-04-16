@@ -1,4 +1,5 @@
-:root {
+:root
+{
   /* Paleta de Colores (Basada en Herencia y Tierra) */
   --color-primary: #532721;           /* Marrón oscuro (Principal) */
   --color-primary-active: #3d1c18;    /* Versión más oscura para hover */
@@ -17,7 +18,8 @@
   --color-highlight: rgba(95, 99, 53, 0.2); /* Resalte basado en el Verde Oliva */
 }
 
-Fonts {
+Fonts
+{
   --font-family-body: "Open Sans", sans-serif;
   --font-family-display: "Nunito Sans", sans-serif;
 }
