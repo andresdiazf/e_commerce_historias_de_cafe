@@ -41,7 +41,7 @@ body{
 
 .card-hover {
     transition: 2s;
-    background: #b0a799;
+    background: rgba(95, 99, 53, 0.15);
     transform: rotateY(360deg);
 }
 
