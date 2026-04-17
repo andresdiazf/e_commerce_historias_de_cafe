@@ -34,4 +34,3 @@ document.querySelectorAll('.opcionesBarra').forEach(link => {
         }
     });
 });
-
