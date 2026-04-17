@@ -1,9 +1,9 @@
 
 @import url('https://googleapis.com');
-@import url("paletaColores.css");
+@import url("/assets/img/paletaColores.css");
 
 body{
-    background: url('./img/background1.jpg') center/cover;
+    background: url('/assets/img/background1.jpg') center/cover;
     background-attachment: fixed; 
     margin: 0;
     display: flex;
