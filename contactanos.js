@@ -13,12 +13,16 @@ form.addEventListener('submit', function (event) {
     //Realizo validaciones para cada input de form
     //Validacion de input nombre
     const nombreInput = document.getElementById('name');
+    const nombreRegex = /^[a-zA-Z\s]+$/; //Solo letras y espacios 
     //Validamos que el campo no este vacio
     if (nombreInput.value.trim() === '') {
         mostrarError(nombreInput, 'Ingresa tu nombre');
         isValid = false;
     } else if (nombreInput.value.trim().length < 3) {
         mostrarError(nombreInput, 'El nombre debe tener al menos 3 caracteres');
+        isValid = false;
+    }else if (!nombreRegex.test(nombreInput.value.trim())) {
+        mostrarError(nombreInput, 'El nombre solo puede contener letras y espacios');
         isValid = false;
     }
     //Validacion de input email
@@ -39,6 +43,9 @@ form.addEventListener('submit', function (event) {
         isValid = false;
     } else if (!telefonoRegex.test(telefonoInput.value.trim())) {
         mostrarError(telefonoInput, 'Por favor, ingresa un número de teléfono válido');
+        isValid = false;
+    }else if (telefonoInput.value.trim().length < 10) {
+        mostrarError(telefonoInput, 'El número de teléfono debe tener al menos 10 dígitos');
         isValid = false;
     }
     // Validacion de textarea mensaje
