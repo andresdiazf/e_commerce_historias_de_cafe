@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>navbar</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <title>nabvar</title>
+    <link rel="stylesheet" href="navbar.css">
 </head>
+
 <body>
-    <nav>nabvar</nav>
-    
+    <!-- Este div  hace la animacion de la tasa de cafe en el navbar -->
+    <div id="coffecup-transition">
+        <div class="coffee-stain"></div>
+        <div class="coffecup">
+            <img src="img/animation_cup.svg" alt="taza" class="coffecup-img">
+        </div>
+    </div>
+
+    <header>
+
+        </nav>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark barraNavegacion">
+            <div class="container-fluid">
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li><a class="nav-link opcionesBarra" href="#">Inicio</a></li>
+                        <li><a class="nav-link opcionesBarra" href="contactanos.html">contactanos</a></li>
+                        <li><a class="nav-link opcionesBarra" href="#section-cards">Equipo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="navbar.js"></script>
+
 </body>
+
 </html>
