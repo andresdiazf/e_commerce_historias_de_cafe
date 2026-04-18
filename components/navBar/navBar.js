@@ -34,4 +34,7 @@ document.querySelectorAll('.opcionesBarra').forEach(link => {
         }
     });
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
