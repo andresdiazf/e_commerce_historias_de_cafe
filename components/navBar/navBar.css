@@ -177,17 +177,15 @@ body {
 
 
 #coffecup-transition {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
   justify-content: center;
   align-items: center;
-  z-index: 10000;
-  overflow: hidden;
-  background: transparent;
 }
 
 .coffee-stain {
@@ -288,3 +286,33 @@ body {
 }
 
 /* Estilos de la animacion de la taza de cafe para el navbar */
+
+
+/* menu hamgurguesa */
+.hamburger-btn {
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-primary);
+  display: block;
+  border-radius: 2px;
+}
+.navbar-toggler[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
