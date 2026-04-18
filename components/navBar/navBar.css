@@ -1,167 +1,105 @@
-<<<<<<< HEAD
-=======
 
 @import url('https://googleapis.com');
 @import url("/assets/img/paletaColores.css");
 
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
 :root {
-  --color-primary: #532721;
-  --color-primary-active: #3d1c18;
-  --color-secondary: #B08D57;
-  --color-secondary-muted: rgba(176, 141, 87, 0.6);
-  --color-accent: #5F6335;
-  --color-background: #E4DBBF;
-  --color-text-default: #1A1A1A;
-  --color-border-default: #B08D57;
-<<<<<<< HEAD
+--color-primary: #532721;
+--color-primary-active: #3d1c18;
+@@ -7,7 +11,8 @@
+--color-background: #E4DBBF;
+--color-text-default: #1A1A1A;
+--color-border-default: #B08D57;
   --color-highlight: rgba(176, 141, 87, 0.1); /* Suave para el hover */
-=======
   --color-highlight: rgba(176, 141, 87, 0.1);
   /* Suave para el hover */
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
 }
 
 /* --- Estilos Base --- */
-body {
-  background: var(--color-background);
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-<<<<<<< HEAD
-=======
+@@ -16,6 +21,7 @@ body {
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', system-ui, sans-serif;
   padding-top: 90px;
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
 }
 
 .label-tag-full {
-  font-size: 11px;
-  text-align: center;
-  background: var(--color-primary);
-  color: #fff;
-  padding: 4px 0;
-  letter-spacing: 1px;
-<<<<<<< HEAD
-=======
+@@ -25,39 +31,51 @@ body {
+color: #fff;
+padding: 4px 0;
+letter-spacing: 1px;
   position: relative;
   z-index: 1;
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
 }
 
 /* --- Contenedor Principal (Nav) --- */
 .nav-container-full {
-<<<<<<< HEAD
-  width: 100%;
-=======
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+width: 100%;
   z-index: 1000;
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
-  background: #ffffff;
-  border-bottom: 1px solid var(--color-border-default);
+background: #ffffff;
+border-bottom: 1px solid var(--color-border-default);
 }
 
 .nav-custom-full {
-  max-width: 1400px;
-<<<<<<< HEAD
+max-width: 1400px;
   margin: 0 auto;
   height: 100px; /* <Agrandar la barra para tener espacio */
-=======
   margin: auto 55px;
   height: 100px;
   /* <Agrandar la barra para tener espacio */
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-<<<<<<< HEAD
-=======
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 5%;
   flex-wrap: nowrap;
 
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
 }
 
 /* ---- El Logo --- */
 .brand-container {
-  display: flex;
-  align-items: center;
-<<<<<<< HEAD
+display: flex;
+align-items: center;
   height: 100%; /* Ocupa todo el alto disponible */
-=======
   height: 100%;
   /* Ocupa todo el alto disponible */
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
-  flex-shrink: 0;
+flex-shrink: 0;
 }
 
 /* Agrandar el logo relativo a la barra */
 .nav-logo {
-<<<<<<< HEAD
   max-height: 100px; /* <--- Ajustar este valor para más pequeño/grande */
-  width: auto;
-  object-fit: contain;
-  padding: 10px 0; /* Un poco de "aire" arriba y abajo */
-=======
   max-height: 100px;
   /* <--- Ajustar este valor para más pequeño/grande */
-  width: auto;
-  object-fit: contain;
+width: auto;
+object-fit: contain;
+  padding: 10px 0; /* Un poco de "aire" arriba y abajo */
   padding: 10px 0;
   /* Un poco de "aire" arriba y abajo */
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
 }
 
 .links3 {
-  display: flex;
-  height: 100%;
+@@ -77,7 +95,9 @@ body {
+transition: 0.2s;
+border-bottom: 3px solid transparent;
 }
-
-.link3 {
-  font-size: 14px;
-  color: var(--color-text-default);
-  text-decoration: none;
-  padding: 0 15px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  transition: 0.2s;
-  border-bottom: 3px solid transparent;
-}
-<<<<<<< HEAD
 .link3:hover, .link3.active3 {
-=======
 
 .link3:hover,
 .link3.active3 {
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
-  color: var(--color-primary);
-  border-bottom-color: var(--color-primary);
+color: var(--color-primary);
+border-bottom-color: var(--color-primary);
 }
-
-/* Recuadros de Botones carrito y usuario--- */
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+@@ -91,15 +111,20 @@ body {
 
 /* ELIMINAR LOS RECUADROS POR DEFECTO DE BOOTSTAP */
 .icon-btn3 {
-<<<<<<< HEAD
   border: none !important;       /* <--- Quita el borde (crítico) */
   background: transparent !important; /* <--- Quita el fondo gris (crítico) */
   outline: none !important;    /* <--- Quita el resalte al hacer click */
   box-shadow: none !important; /* <--- Quita sombras adicionales de Bootstrap */
   
-  /* Ajustes de tamaño del icono */
-  width: 42px;
-  height: 42px;
-  border-radius: 50%; /* Hover circular */
-=======
   border: none !important;
   /* <--- Quita el borde (crítico) */
   background: transparent !important;
@@ -171,216 +109,37 @@ body {
   box-shadow: none !important;
   /* <--- Quita sombras adicionales de Bootstrap */
 
-  /* Ajustes de tamaño del icono */
-  width: 42px;
-  height: 42px;
+/* Ajustes de tamaño del icono */
+width: 42px;
+height: 42px;
+  border-radius: 50%; /* Hover circular */
   border-radius: 50%;
   /* Hover circular */
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-primary);
-  cursor: pointer;
-  font-size: 20px;
-  transition: all 0.2s ease;
-  position: relative;
-}
+display: flex;
+align-items: center;
+justify-content: center;
+@@ -112,7 +137,8 @@ body {
 
 /* Nuevo efecto hover suave para botones limpios */
 .icon-btn3:hover {
-<<<<<<< HEAD
   background-color: var(--color-highlight); /* Un suave tono dorado */
-=======
   background-color: var(--color-highlight);
   /* Un suave tono dorado */
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
-  color: var(--color-primary-active);
+color: var(--color-primary-active);
 }
 
-/* -- Badge Dot (Verde Oliva) -- */
-.badge-dot3 {
-  position: absolute;
-  top: 9px;
-  right: 9px;
-  width: 8px;
-  height: 8px;
-  background: var(--color-accent);
-  border-radius: 50%;
-  border: 2px solid #fff;
+@@ -140,6 +166,7 @@ body {
+cursor: pointer;
+transition: 0.2s;
 }
 
-/* -- Botón CTA (sin recuadros extra) -- */
-.cta-primary {
-  background: var(--color-primary);
-  color: white;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 13px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-<<<<<<< HEAD
 .cta-primary:hover {
-  background: var(--color-primary-active);
-}:root {
-  --color-primary: #532721;
-  --color-primary-active: #3d1c18;
-  --color-secondary: #B08D57;
-  --color-secondary-muted: rgba(176, 141, 87, 0.6);
-  --color-accent: #5F6335;
-  --color-background: #E4DBBF;
-  --color-text-default: #1A1A1A;
-  --color-border-default: #B08D57;
-  --color-highlight: rgba(176, 141, 87, 0.1); /* Suave para el hover */
+background: var(--color-primary-active);
 }
-
-/* --- Estilos Base --- */
-body {
-  background: var(--color-background);
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-}
-
-.label-tag-full {
-  font-size: 11px;
-  text-align: center;
-  background: var(--color-primary);
-  color: #fff;
-  padding: 4px 0;
-  letter-spacing: 1px;
-}
-
-/* --- Contenedor Principal (Nav) --- */
-.nav-container-full {
-  width: 100%;
-  background: #ffffff;
-  border-bottom: 1px solid var(--color-border-default);
-}
-
-.nav-custom-full {
-  max-width: 1400px;
-  margin: 0 auto;
-  height: 100px; /* <Agrandar la barra para tener espacio */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-}
-
-/* ---- El Logo --- */
-.brand-container {
-  display: flex;
-  align-items: center;
-  height: 100%; /* Ocupa todo el alto disponible */
-  flex-shrink: 0;
-}
-
-/* Agrandar el logo relativo a la barra */
-.nav-logo {
-  max-height: 100px; /* <--- Ajustar este valor para más pequeño/grande */
-  width: auto;
-  object-fit: contain;
-  padding: 10px 0; /* Un poco de "aire" arriba y abajo */
-}
-
-.links3 {
-  display: flex;
-  height: 100%;
-}
-
-.link3 {
-  font-size: 14px;
-  color: var(--color-text-default);
-  text-decoration: none;
-  padding: 0 15px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  transition: 0.2s;
-  border-bottom: 3px solid transparent;
-}
-.link3:hover, .link3.active3 {
-  color: var(--color-primary);
-  border-bottom-color: var(--color-primary);
-}
-
-/* Recuadros de Botones carrito y usuario--- */
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-/* ELIMINAR LOS RECUADROS POR DEFECTO DE BOOTSTAP */
-.icon-btn3 {
-  border: none !important;       /* <--- Quita el borde (crítico) */
-  background: transparent !important; /* <--- Quita el fondo gris (crítico) */
-  outline: none !important;    /* <--- Quita el resalte al hacer click */
-  box-shadow: none !important; /* <--- Quita sombras adicionales de Bootstrap */
-  
-  /* Ajustes de tamaño del icono */
-  width: 42px;
-  height: 42px;
-  border-radius: 50%; /* Hover circular */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-primary);
-  cursor: pointer;
-  font-size: 20px;
-  transition: all 0.2s ease;
-  position: relative;
-}
-
-/* Nuevo efecto hover suave para botones limpios */
-.icon-btn3:hover {
-  background-color: var(--color-highlight); /* Un suave tono dorado */
-  color: var(--color-primary-active);
-}
-
-/* -- Badge Dot (Verde Oliva) -- */
-.badge-dot3 {
-  position: absolute;
-  top: 9px;
-  right: 9px;
-  width: 8px;
-  height: 8px;
-  background: var(--color-accent);
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-/* -- Botón CTA (sin recuadros extra) -- */
-.cta-primary {
-  background: var(--color-primary);
-  color: white;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 13px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-=======
-
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
-.cta-primary:hover {
-  background: var(--color-primary-active);
-}
-
-
-
-/* Estilos de la animacion de la taza de cafe para el navbar */
+@@ -150,105 +177,114 @@ body {
 
 
 #coffecup-transition {
-<<<<<<< HEAD
     position: fixed;
     top: 0;
     left: 0;
@@ -392,23 +151,6 @@ body {
     z-index: 10000;
     overflow: hidden;
     background: transparent;
-}
-
-.coffee-stain {
-position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-
-    background: rgba(60, 42, 33, 0.4); 
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-
-    filter: blur(15px); 
-    box-shadow: 0 0 30px rgba(60, 42, 33, 0.2);
-=======
   position: fixed;
   top: 0;
   left: 0;
@@ -423,36 +165,39 @@ position: absolute;
 }
 
 .coffee-stain {
+position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 0;
   height: 0;
 
+    background: rgba(60, 42, 33, 0.4); 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
   background: rgba(60, 42, 33, 0.4);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
 
+    filter: blur(15px); 
+    box-shadow: 0 0 30px rgba(60, 42, 33, 0.2);
   filter: blur(15px);
   box-shadow: 0 0 30px rgba(60, 42, 33, 0.2);
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
 }
 
 
 .coffecup {
-<<<<<<< HEAD
     width: 180px; 
     display: flex;
     justify-content: center;
     align-items: center;
     filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
-}
-
-.coffecup-img {
-    width: 100%;
-    height: auto;
-=======
   width: 180px;
   display: flex;
   justify-content: center;
@@ -461,24 +206,22 @@ position: absolute;
 }
 
 .coffecup-img {
+    width: 100%;
+    height: auto;
   width: 100%;
   height: auto;
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
 }
 
 
 .launching .coffee-stain {
-<<<<<<< HEAD
     animation: fillScreen 1.2s ease-in-out forwards;
-=======
   animation: fillScreen 1.2s ease-in-out forwards;
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
 }
 
 
 .launching {
-<<<<<<< HEAD
     animation: cupBehavior 1.2s ease-in-out forwards;
+  animation: cupBehavior 1.2s ease-in-out forwards;
 }
 
 @keyframes fillScreen {
@@ -500,11 +243,6 @@ position: absolute;
         height: 150vmax;
         opacity: 0; 
     }
-=======
-  animation: cupBehavior 1.2s ease-in-out forwards;
-}
-
-@keyframes fillScreen {
   0% {
     width: 0;
     height: 0;
@@ -526,14 +264,12 @@ position: absolute;
     height: 150vmax;
     opacity: 0;
   }
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
 }
 
 
 
 
 @keyframes cupBehavior {
-<<<<<<< HEAD
     0% {
         transform: scale(0) rotate(0deg);
         opacity: 0;
@@ -556,8 +292,6 @@ position: absolute;
         opacity: 0;
         transform: scale(1.5);
     }
-}
-=======
   0% {
     transform: scale(0) rotate(0deg);
     opacity: 0;
@@ -587,5 +321,4 @@ position: absolute;
   }
 }
 
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
 /* Estilos de la animacion de la taza de cafe para el navbar */
