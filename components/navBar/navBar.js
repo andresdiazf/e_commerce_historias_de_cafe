@@ -1,11 +1,12 @@
 document.querySelectorAll('.opcionesBarra').forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault();
+        e.preventDefault(); // Detenemos el salto inmediato en ambos casos
         
         const href = this.getAttribute('href');
         const transition = document.getElementById('coffecup-transition');
         const coffecupContainer = transition.querySelector('.coffecup');
 
+        // 1. Iniciar la animación común
         document.body.style.overflow = 'hidden'; 
         transition.style.display = 'flex';
         
@@ -13,7 +14,9 @@ document.querySelectorAll('.opcionesBarra').forEach(link => {
             transition.classList.add('launching');
         }, 10);
 
+        // 2. Lógica diferenciada
         if (href.startsWith('#')) {
+            // --- CASO A: Scroll interno ---
             const targetSection = document.querySelector(href);
             
             setTimeout(() => {
@@ -27,14 +30,11 @@ document.querySelectorAll('.opcionesBarra').forEach(link => {
             }, 1200); 
 
         } else {
-
+            // --- CASO B: Ir a otra página .html ---
+            // Esperamos a que la mancha cubra la pantalla para cambiar de página
             setTimeout(() => {
                 window.location.href = href; 
-            }, 900);
+            }, 900); // Se dispara un poco antes de que termine para que sea fluido
         }
     });
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 950e3ddb11f90513af2ecddb5b78d3ae8056af9c
