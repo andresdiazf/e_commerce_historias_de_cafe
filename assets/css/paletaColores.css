@@ -23,3 +23,16 @@ Fonts
   --font-family-body: "Open Sans", sans-serif;
   --font-family-display: "Nunito Sans", sans-serif;
 }
+
+/* Icono Carrito */
+.carrito-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Icono Usuario */
+.usuario-icon {
+  width: 26px;
+  height: 26px;
+}
+
