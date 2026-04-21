@@ -1,3 +1,6 @@
+// 1. Declaramos la lista (array) fuera para que sea global a la lógica
+const listaProductos = []; 
+
 function initProductLogic() {
     console.log("Iniciando lógica del formulario de productos...");
     
@@ -9,13 +12,13 @@ function initProductLogic() {
     }
 
     form.addEventListener('submit', (e) => {
-        // 1. Prevenir que la página se recargue
         e.preventDefault();
 
-        // 2. Capturar los valores de los inputs
         const imagenInput = document.getElementById('imagen');
         
+        // 2. Creamos el objeto del producto actual
         const producto = {
+            id: Date.now(), //TODO: aun no implementado , pendiente de organizar con db.
             nombre: document.getElementById('nombre').value,
             origen: document.getElementById('origen').value,
             tostado: document.getElementById('tostado').value,
@@ -26,14 +29,11 @@ function initProductLogic() {
             imagen: imagenInput.files[0] ? imagenInput.files[0].name : 'No seleccionada'
         };
 
-        // 3. Convertir a JSON y mostrar en consola
-        console.log("Objeto JavaScript capturado:", producto);
-        const productoJSON = JSON.stringify(producto, null, 2);
-        console.log("JSON resultante:\n", productoJSON);
+        listaProductos.push(producto);
+        console.log("Lista de productos actualizada:");
+        console.log(JSON.stringify(listaProductos, null, 2));
 
-        // Opcional: Limpiar el formulario
         form.reset();
-        
-        alert('Producto guardado con éxito. Revisa la consola.');
+        alert('Producto agregado a la lista');
     });
 }
