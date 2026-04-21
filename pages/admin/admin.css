@@ -1,4 +1,4 @@
-    .contenedor-admin {
+.contenedor-admin {
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
@@ -6,7 +6,7 @@
     border-radius: 8px;
     font-family: Arial, sans-serif;
 }
-
+ 
 form input, form select, form textarea {
     width: 100%;
     margin-bottom: 10px;
@@ -14,7 +14,7 @@ form input, form select, form textarea {
     display: block;
     box-sizing: border-box;
 }
-
+ 
 button {
     width: 100%;
     background-color: #6f4e37; /* Color café */

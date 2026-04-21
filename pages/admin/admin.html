@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="admin.css">
+     <link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
+     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
     <div class="contenedor-admin">
@@ -13,9 +14,17 @@
         <input type="text" id="nombre" placeholder="Nombre del grano (Ej: Geisha)" required>
         <input type="text" id="origen" placeholder="Origen (Ej: Huila, Colombia)" required>
         <select id="tostado">
+  
+            <option value="" selected>seleccionar tipo de tostion</option>
             <option value="Claro">Tostado Claro</option>
             <option value="Medio">Tostado Medio</option>
             <option value="Oscuro">Tostado Oscuro</option>
+        </select>
+        <select  id="estado">
+            <label for="">Estado</label>
+            <option value="" selected> Seleccionar estado</option>
+            <option value="Claro">Disponible</option>
+            <option value="Medio">No disponible</option>
         </select>
      <label for="imagen">Imagen del producto:</label>
     <input type="file" id="imagen" accept="image/*" required>
@@ -27,5 +36,6 @@
         <button type="submit" id="btnAgregar">Agregar al Catálogo</button>
     </form>
 </div>
+    
 </body>
 </html>
