@@ -5,7 +5,7 @@ function loadComponent(containerId, path, callback) {
       document.getElementById(containerId).innerHTML = data;
       if (callback) callback();
     })
-    .catch(err => console.error("Error:", err));
+    //.catch(err => console.error("Error:", err));
 }
 
 // 🔥 Navbar logic PRO
@@ -82,9 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handlePageAnimation(); // 👈 IMPORTANTE
 
-  loadComponent("navbar-container", "/components/navBar/navBar.html", initNavbar);
-  loadComponent("productform-container","/components/product/productForm.html");
+  loadComponent("navbar-container", "/components/navBar/navBar.html", initNavbar);;
   loadComponent("footer-container", "/components/footer/footer.html");
+  loadComponent("productform-container", "/components/product/productForm.html", initProductLogic);
 
 });
 
