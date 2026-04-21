@@ -1,6 +1,6 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('form-producto');
+// document.addEventListener('DOMContentLoaded', () => {
+//     const form = document.getElementById('form-producto');
  
     form.addEventListener('submit', (e) => {
         // 1. Prevenir que la página se recargue
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // form.reset();
         alert('Producto capturado con éxito. Revisa la consola (F12).');
     });
-});
+// });
 
 
 

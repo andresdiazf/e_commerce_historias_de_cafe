@@ -83,7 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
   handlePageAnimation(); // 👈 IMPORTANTE
 
   loadComponent("navbar-container", "/components/navBar/navBar.html", initNavbar);
+  loadComponent("productform-container","/components/product/productForm.html");
   loadComponent("footer-container", "/components/footer/footer.html");
+
 });
 
 
@@ -126,7 +128,7 @@ form.addEventListener('submit', function (event) {
         mostrarError(emailInput, 'Por favor, ingresa un correo electrónico válido');
         isValid = false;
     }
-    //Valicion de input telefono
+    //Validacion de input telefono
     const telefonoInput = document.getElementById('number');
     const telefonoRegex = /^[0-9+\s]+$/;
     if (telefonoInput.value.trim() === '') {
