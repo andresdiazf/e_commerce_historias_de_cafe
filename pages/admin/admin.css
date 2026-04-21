@@ -5,20 +5,26 @@
     --text-dark: #333;
 }
 
-body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg-main); }
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    margin: 0; 
+    background: var(--bg-main); 
+    color: var(--text-dark);
+}
 
 .dashboard-container { display: flex; min-height: 100vh; }
 
 /* Sidebar */
 .sidebar { width: 250px; background: var(--bg-sidebar); padding: 20px; border-right: 1px solid #bbb; }
+.sidebar .logo-section { font-weight: bold; margin-bottom: 30px; display: flex; align-items: center; gap: 10px; }
 .sidebar ul { list-style: none; padding: 0; }
-.sidebar li { padding: 15px; cursor: pointer; border-radius: 5px; margin-bottom: 5px; }
+.sidebar li { padding: 15px; cursor: pointer; border-radius: 5px; margin-bottom: 5px; transition: 0.3s; }
 .sidebar li.active { background: #b0b0b0; font-weight: bold; }
+.sidebar li:hover { background: #e0e0e0; }
 
 /* Main Content */
 .main-content { flex: 1; display: flex; flex-direction: column; }
 .top-bar { background: white; padding: 15px 30px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
-
 .content-padding { padding: 25px; }
 
 /* Stats Cards */
@@ -26,11 +32,30 @@ body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg-main
 .stat-card { background: #d9d9d9; padding: 20px; text-align: center; border-radius: 4px; }
 .stat-card strong { display: block; font-size: 1.5rem; }
 
-/* Tabla */
-.table-section { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+/* Tabla y Secciones */
+.table-header { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; margin-bottom: 15px; }
+.admin-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 th { background: #e0e0e0; padding: 12px; text-align: left; }
 td { padding: 12px; border-bottom: 1px solid #eee; }
 
-/* Botones de estado parecidos a la imagen */
-.status-pill { padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; background: #bbb; }
+/* Botones Pequeños(Ajuste Final) */
+.btn-add {
+    background-color: var(--accent) !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 16px !important;
+    border-radius: 4px !important;
+    font-size: 0.85rem !important;
+    cursor: pointer;
+    width: fit-content !important; /* Evita que se estire como en la imagen */
+}
+
+.btn-delete {
+    background-color: #f8d7da !important;
+    color: #721c24 !important;
+    border: 1px solid #f5c6cb !important;
+    padding: 4px 10px !important;
+    border-radius: 3px !important;
+    font-size: 0.75rem !important;
+    cursor: pointer;
+}
