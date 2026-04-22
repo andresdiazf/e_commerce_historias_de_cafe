@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.title {
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+/* Contenedor de Cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo de la Card */
+.card {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.image-placeholder {
+    background-color: #ddd;
+    border: 1px solid #000;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-content h3 { margin: 5px 0; }
+.finca { font-weight: bold; margin: 0; }
+.price { font-weight: bold; font-size: 1.2rem; margin: 10px 0; }
+
+.card-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-cart, .btn-detail {
+    border: 1px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    border-radius: 20px;
+}
+
+.btn-cart {
+    background-color: #333;
+    color: white;
+}
+
+.btn-detail {
+    background-color: #ccc;
+}
