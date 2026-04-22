@@ -1,9 +1,9 @@
 <div class="container">
 <div class="contenedor-admin">
     <h2>Panel de Administración - Carga de Café</h2>
-    <form id="form-producto">
-        <input type="text" id="nombre" placeholder="Nombre del grano (Ej: Geisha)" required>
-        <input type="text" id="origen" placeholder="Origen (Ej: Huila, Colombia)" required>
+    <form id="form-producto" novalidate>
+        <input type="text" id="nombre" placeholder="Nombre del grano (Ej: Geisha)" >
+        <input type="text" id="origen" placeholder="Origen (Ej: Huila, Colombia)" >
         <select id="tostado">
   
             <option value="" selected>seleccionar tipo de tostion</option>
@@ -17,10 +17,11 @@
             <option value="disponible">Disponible</option>
             <option value="no-disponible">No disponible</option>
         </select>
-     <label for="imagen">Imagen del producto:</label>
-    <input type="file" id="imagen" accept="image/*" required>
+
+     <label for="imagen" class="form-label">Imagen del producto</label>
+  <input class="form-control" type="file" id="imagen" accept="image/*" >
     
-    <input type="number" id="stock" placeholder="Cantidad en inventario (Stock)" required>
+    <input type="number" id="stock" placeholder="Cantidad en inventario (Stock)" >
     <input type="number" id="precio" placeholder="Precio" required>
         <textarea id="descripcion" placeholder="Notas de cata (Ej: Notas frutales, jazmín)"></textarea>
         
