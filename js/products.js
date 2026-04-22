@@ -71,6 +71,12 @@ function initProductLogic() {
 
         // --- GUARDADO ---
         if (isValid) {
+            const file = imagenInput.files[0];
+            const reader = new FileReader();
+            
+
+            reader.onload = function (e){
+            const base64Image = reader.result
             const producto = {
                 id: Date.now(),
                 nombre: nombreInput.value.trim(),
@@ -80,7 +86,7 @@ function initProductLogic() {
                 stock: parseInt(stockInput.value),
                 precio: parseFloat(precioInput.value),
                 descripcion: descInput.value.trim(),
-                imagen: imagenInput.files[0].name
+                imagen: base64Image      //imagenInput.files[0].name
             };
 
             listaProductos.push(producto);
@@ -101,8 +107,12 @@ function initProductLogic() {
             setTimeout(() => {
                 alert('¡Producto de Historias de Café agregado con éxito!');
             }, 100);
+            };
+            reader.readAsDataURL(file);
         }
+    
     });
+    
 }
 
 // --- MOSTRAR ERRORES ---
@@ -179,3 +189,21 @@ window.onclick = (event) => {
         modal.style.display = "none";
     }
 };
+
+// --- PERSISTENCIA: Cargar datos al iniciar ---
+function cargarDesdeStorage() {
+    const datosGuardados = localStorage.getItem('productos');
+    if (datosGuardados) {
+        // Limpiamos el array actual y le pasamos los datos del storage
+        const productosRecuperados = JSON.parse(datosGuardados);
+        
+        // Usamos spread operator para meter los datos en nuestra lista constante
+        listaProductos.push(...productosRecuperados);
+        
+        // Refrescamos la tabla para que se vean
+        actualizarTabla();
+    }
+}
+
+// Ejecutar cuando cargue el script
+cargarDesdeStorage();
