@@ -12,7 +12,7 @@ function renderizarProductosStorage() {
                 <article class="card">
                     <div class="image-placeholder">
                         <img src="${prod.imagen}" onerror="this.src='https://placeholder.com'" alt="${prod.nombre}"
-                        style="width: 100%; height: 200px; object-fit: cover;">
+                        style="width: auto; height: 100%; object-fit: contain;">
                     </div>
                     <div class="card-content">
                         <h3>${prod.nombre}</h3>
@@ -22,7 +22,7 @@ function renderizarProductosStorage() {
                         <p class="price">$${prod.precio.toLocaleString()}</p>
                         <div class="card-buttons">
                             <button class="btn-cart">AÑADIR AL CARRITO</button>
-                            <button class="btn-detail">👁️ DETALLE</button>
+                            <button class="btn-detail">👁️ MOSTRAR DETALLE</button>
                         </div>
                     </div>
                 </article>
