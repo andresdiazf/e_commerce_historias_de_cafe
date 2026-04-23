@@ -1,4 +1,6 @@
-:root {
+@import url('/assets/css/paletaColores.css');
+
+{
   --bg-main: #f4f4f4;
   --accent: #6f4e37;
   --text-dark: #333;
@@ -17,24 +19,36 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 250px;
-  background: var(--accent);
+  width: 160px;
   padding: 20px;
-  border-right: 1px solid #bbb;
+  margin: 0;
 }
 .sidebar ul {
   list-style: none;
   padding: 0;
 }
 .sidebar li {
-  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 12px 15px;
   cursor: pointer;
-  border-radius: 5px;
-  margin-bottom: 5px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  color: var(--color-background);        /* #E4DBBF crema */
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
 }
+
+.sidebar li:hover {
+  background: var(--color-primary-active);  /* #3d1c18 marrón más oscuro */
+}
+
+
 .sidebar li.active {
-  background: #b0b0b0;
-  font-weight: bold;
+  background: var(--color-secondary);       /* #B08D57 dorado */
+  color: var(--color-primary);              /* #532721 texto marrón sobre dorado */
+  font-weight: 600;
 }
 
 /* Main Content */

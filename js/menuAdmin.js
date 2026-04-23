@@ -1,3 +1,30 @@
+// Carga el componente sidebar en admin.html
+fetch('../../components/menuAdmin/menuAdmin.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('sidebar-container').innerHTML = html;
+
+    // Activar la navegación DESPUÉS de cargar el sidebar
+    activarMenu();
+  })
+  .catch(err => console.error('Error cargando sidebar:', err));
+
+
+function activarMenu() {
+  const items = document.querySelectorAll('.sidebar nav ul li');
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      items.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+
+      const view = item.getAttribute('data-view');
+      document.querySelector('.main-content h1').textContent = view;
+    });
+  });
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const menuItems = document.querySelectorAll(".sidebar ul li");
