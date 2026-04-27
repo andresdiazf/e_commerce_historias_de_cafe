@@ -1,12 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-</head>
-<body>
-    cart
-    
-</body>
-</html>
+<!-- Overlay para oscurecer el fondo -->
+<div id="carrito-overlay" class="carrito-overlay" onclick="toggleCarrito()"></div>
+
+<!-- Carrito Lateral -->
+<aside id="carrito-lateral" class="carrito-sidebar">
+    <div class="carrito-header">
+        <h2>Carrito</h2>
+        <button class="btn-cerrar" onclick="toggleCarrito()">&times;</button>
+    </div>
+
+    <div class="carrito-tabla-header">
+        <span>Producto</span>
+        <span>Precio</span>
+        <span>Cantidad</span>
+        <span>Total</span>
+    </div>
+
+    <div id="carrito-items" class="carrito-body">
+
+        <div class="carrito-item">
+            <div class="prod-info">
+                <div class="prod-img-placeholder"></div>
+                <div class="prod-detalles">
+                    <p>Nombre producto</p>
+                    <button class="btn-eliminar">🗑️</button>
+                </div>
+            </div>
+            <div class="prod-precio">$0.00</div>
+            <div class="prod-cantidad">
+                <div class="control-cantidad">
+                    <button>🗑️</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+            </div>
+            <div class="prod-total">$0.00</div>
+        </div>
+    </div>
+
+    <div class="carrito-footer">
+        <p class="conteo-productos">2 productos</p>
+        <div class="notas-pedido">
+            <label>Agregar notas al pedido</label>
+            <textarea rows="2"></textarea>
+        </div>
+        <hr>
+        <div class="subtotal-section">
+            <span>Subtotal:</span>
+            <strong id="subtotal-valor">$0.00</strong>
+        </div>
+        <button class="btn-pagar">Ir a pagar</button>
+    </div>
+</aside>
