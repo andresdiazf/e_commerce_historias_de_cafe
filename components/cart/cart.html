@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/components/cart/cart.css">
+
+<div id="carrito-overlay" class="carrito-overlay" onclick="toggleCarrito()"></div>
+
+<!-- Carrito Lateral derecho -->
+<aside id="carrito-lateral" class="carrito-sidebar">
+
+  <div class="carrito-header">
+    <h2>Carretilla Cafertera</h2>
+    <button class="btn-cerrar" onclick="toggleCarrito()">&times;</button>
+  </div>
+
+  <div class="carrito-tabla-header">
+    <span>Producto</span>
+    <span>Precio</span>
+    <span>Cantidad</span>
+    <span>Total</span>
+  </div>
+
+  <div id="carrito-items" class="carrito-body">
+    <!-- los items que generan dinámicamente desde cart.js -->
+  </div>
+
+  <div class="carrito-footer">
+    <p class="conteo-productos">0 productos</p>
+    <div class="notas-pedido">
+      <label>Agregar notas al pedido</label>
+      <textarea rows="2"></textarea>
+    </div>
+    <hr>
+    <div class="subtotal-section">
+      <span>Subtotal:</span>
+      <strong id="subtotal-valor">$0</strong>
+    </div>
+    <button class="btn-pagar">Ir a pagar</button>
+  </div>
+
+</aside>
