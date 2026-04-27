@@ -1,0 +1,332 @@
+
+/*fondo oscuro detrás del carrito */
+   
+.carrito-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;                          /* top/right/bottom/left: 0 */
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1040;
+  transition: opacity 0.3s ease;
+}
+
+.carrito-overlay.activo {
+  display: block;
+}
+
+
+/* ASIDE — panel lateral derecho */
+.carrito-sidebar {
+  position: fixed;
+  top: 0;
+  right: -480px;                     /* oculto fuera de pantalla */
+  width: 440px;
+  max-width: 95vw;
+  height: 100vh;
+  background: var(--color-background);
+  box-shadow: -4px 0 24px rgba(83, 39, 33, 0.18);
+  display: flex;
+  flex-direction: column;
+  z-index: 1050;
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: var(--font-family-body, "Source Sans 3", sans-serif);
+}
+
+.carrito-sidebar.abierto {
+  right: 0;
+}
+
+
+/* HEADER del carrito */
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1.25rem;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.carrito-header h2 {
+  font-family: var(--font-family-display, "Playfair Display", serif);
+  font-size: 1.25rem;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+.btn-cerrar {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  transition: color 0.2s;
+}
+
+.btn-cerrar:hover {
+  color: var(--color-secondary);
+}
+
+
+/*  TABLA HEADER — columnas */
+.carrito-tabla-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  background: var(--color-secondary);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+
+/*    BODY — lista de items (scroll) */
+.carrito-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem 0;
+}
+
+.carrito-body::-webkit-scrollbar {
+  width: 5px;
+}
+.carrito-body::-webkit-scrollbar-thumb {
+  background: var(--color-secondary-muted);
+  border-radius: 4px;
+}
+
+
+/*    ITEM individual */
+.carrito-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-secondary-muted);
+  transition: background 0.15s;
+}
+
+.carrito-item:hover {
+  background: rgba(176, 141, 87, 0.08);
+}
+
+
+/* — Columna 1: imagen + nombre + botón eliminar — */
+.prod-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0; /* permite que el texto haga ellipsis */
+}
+
+.prod-img-placeholder {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--color-secondary-muted);
+}
+
+.prod-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prod-detalles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.prod-detalles p {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-default);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-eliminar {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+  color: var(--color-primary);
+  transition: transform 0.15s;
+  align-self: flex-start;
+}
+
+.btn-eliminar:hover {
+  transform: scale(1.2);
+}
+
+
+/* — Columna 2: precio unitario — */
+.prod-precio {
+  font-size: 0.82rem;
+  color: var(--color-text-default);
+  text-align: center;
+}
+
+
+/* — Columna 3: controles cantidad — */
+.prod-cantidad {
+  display: flex;
+  justify-content: center;
+}
+
+.control-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid var(--color-border-default);
+  border-radius: 6px;
+  padding: 0.1rem 0.3rem;
+  background: #fff;
+}
+
+.control-cantidad button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  padding: 0 0.2rem;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.control-cantidad button:hover {
+  color: var(--color-secondary);
+}
+
+.item-cantidad {
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-width: 1.4rem;
+  text-align: center;
+  color: var(--color-text-default);
+}
+
+
+/* — Columna 4: subtotal — */
+.prod-total,
+.item-subtotal {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: right;
+}
+
+
+/*    FOOTER del carrito */
+.carrito-footer {
+  padding: 1rem 1.25rem;
+  border-top: 2px solid var(--color-secondary);
+  background: var(--color-background);
+}
+
+.conteo-productos {
+  font-size: 0.82rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.notas-pedido {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.notas-pedido label {
+  font-size: 0.78rem;
+  color: var(--color-text-default);
+  font-weight: 600;
+}
+
+.notas-pedido textarea {
+  resize: vertical;
+  border: 1px solid var(--color-border-default);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.82rem;
+  font-family: var(--font-family-body, sans-serif);
+  background: #fff;
+  color: var(--color-text-default);
+}
+
+.notas-pedido textarea:focus {
+  outline: none;
+  border-color: var(--color-border-active);
+}
+
+.subtotal-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0 1rem;
+  font-size: 1rem;
+}
+
+.subtotal-section span {
+  color: var(--color-text-default);
+  font-weight: 600;
+}
+
+.subtotal-section strong {
+  color: var(--color-primary);
+  font-size: 1.15rem;
+}
+
+.btn-pagar {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--font-family-display, serif);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-pagar:hover {
+  background: var(--color-primary-active);
+}
+
+
+/*    RESPONSIVE — móvil  */
+@media (max-width: 480px) {
+  .carrito-sidebar {
+    width: 100vw;
+  }
+
+  .carrito-tabla-header,
+  .carrito-item {
+    grid-template-columns: 2fr 1fr 1fr;  /* oculta columna precio en móvil */
+  }
+
+  /* Oculta la columna "Precio" en móvil */
+  .carrito-tabla-header span:nth-child(2),
+  .prod-precio {
+    display: none;
+  }
+}
