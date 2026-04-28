@@ -107,6 +107,8 @@ function initCart() {
   function updateConteo() { conteoProductos.textContent = `${cantidadItems} productos`; }
   function updateSubtotal() { subtotalValor.textContent = '$' + totalAcumulado.toLocaleString('es-CO'); }
 
+  //API DE PAGO
+
  const checkoutButton = document.getElementById("btn-pagar");
 
   if (checkoutButton) {
