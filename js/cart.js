@@ -144,9 +144,9 @@ function initCart() {
     updateSubtotal()
   }
 
-  // ================================================
+   
   // HELPER: actualiza cantidad y subtotal del item
-  // ================================================
+  
   function actualizarCantidadItem(div, nuevaCantidad) {
     const precio        = parseFloat(div.dataset.precio)
     const nuevoSubtotal = precio * nuevaCantidad
