@@ -1,6 +1,6 @@
 
 /*fondo oscuro detrás del carrito */
-   
+
 .carrito-overlay {
   display: none;
   position: fixed;
@@ -161,7 +161,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 1.00rem;
   padding: 0;
   color: var(--color-primary);
   transition: transform 0.15s;
@@ -328,5 +328,100 @@
   .carrito-tabla-header span:nth-child(2),
   .prod-precio {
     display: none;
+  }
+}
+/* MEJORAS VISUALES EXTRA */
+
+
+/* animación al abrir carrito */
+.carrito-sidebar{
+  transition: right .35s ease, box-shadow .3s ease;
+}
+
+/* sombra premium */
+.carrito-sidebar.abierto{
+  box-shadow: -8px 0 30px rgba(0,0,0,.18);
+}
+
+/* hover productos */
+.carrito-item{
+  border-radius: 8px;
+}
+
+.carrito-item:hover{
+  transform: translateX(-3px);
+}
+
+/* botones cantidad */
+.control-cantidad button{
+  transition: .2s ease;
+}
+
+.control-cantidad button:hover{
+  transform: scale(1.12);
+}
+
+/* botón pagar */
+.btn-pagar{
+  transition: .3s ease;
+}
+
+.btn-pagar:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,.15);
+}
+
+/* textarea */
+.notas-pedido textarea{
+  transition: .2s ease;
+}
+
+.notas-pedido textarea:focus{
+  box-shadow: 0 0 0 3px rgba(176,141,87,.2);
+}
+
+/* scroll bonito */
+.carrito-body::-webkit-scrollbar{
+  width:6px;
+}
+
+.carrito-body::-webkit-scrollbar-thumb{
+  background:#b08d57;
+  border-radius:10px;
+}
+
+ /*FLEX GLOBAL RESPONSIVE*/
+
+.carrito-header,
+.subtotal-section,
+.prod-info,
+.control-cantidad,
+.notas-pedido,
+.carrito-footer{
+  display:flex;
+}
+
+.carrito-footer{
+  flex-direction:column;
+}
+
+/* celular */
+@media(max-width:768px){
+
+  .carrito-item{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .prod-cantidad,
+  .prod-total,
+  .prod-precio{
+    width:100%;
+    text-align:left;
+  }
+
+  .control-cantidad{
+    justify-content:flex-start;
   }
 }
